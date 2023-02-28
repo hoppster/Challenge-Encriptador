@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/slyle.css">
+    <title>Mago Encriptador</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon.png" />
+
+</head>
+<body>
+
+<!--
+
+Requisitos:
+
+Las "llaves" de encriptación que utilizaremos son las siguientes:
+
+La letra "e" es convertida para "enter"
+La letra "i" es convertida para "imes"
+La letra "a" es convertida para "ai"
+La letra "o" es convertida para "ober"
+La letra "u" es convertida para "ufat"
+
+- Debe funcionar solo con letras minúsculas
+- No deben ser utilizados letras con acentos ni caracteres especiales
+- Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
+- Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del c
+trl+C o de la opción "copiar" del menú de las aplicaciones.
+
+
+-->
+
+<main>
+    <section class="caja1">
+        <form action=""></form>
+            <textarea autofocus class="textoInput" type="text" name="inputTexto" id="inputTexto" placeholder="Escribe aqui el texto..."></textarea> <br>
+            <input class="btn" type="button" value="Encriptar!" id="botonEncriptar">
+            <input class="btn" type="button" value="Desencriptar!" id="botonDesencriptar">
+        </form>
+    
+    
+    </section>
+    
+    <section class="caja2">
+        
+        <textarea class="textInputSalida" type="text" id="msg" readonly placeholder="Aqui aparece tu resultado!"></textarea> <br>
+        <input class="btn" type="button" value="Copiar Texto" id="botonCopiar">
+      </section>
+
+<script>
+
+function encriptar (){
+        var texto = document.querySelector("#inputTexto").value;
+        var textoCifrado = texto.replace(/e/gi, "enter")
+                                .replace(/i/gi, "imes")
+                                .replace(/a/gi, "ai")
+                                .replace(/o/gi, "ober")
+                                .replace(/u/gi, "ufat");
+        document.querySelector(".textInputSalida").value = textoCifrado;
+        document.querySelector("#inputTexto").value;
+
+}
+
+var boton1 = document.querySelector("#botonEncriptar");
+boton1.onclick = encriptar;
+
+function encriptar (){
+    var texto = document.querySelector("#inputTexto").value;
+    var textoCifrado = texto.replace(/e/gi, "enter")
+                            .replace(/i/gi, "imes")
+                            .replace(/a/gi, "ai")
+                            .replace(/o/gi, "ober")
+                            .replace(/u/gi, "ufat");
+    document.querySelector(".textInputSalida").value = textoCifrado;
+    document.querySelector("#inputTexto").value;
+    }
+
+
+    
+var boton1 = document.querySelector("#botonEncriptar"); boton1.onclick = encriptar;
+
+function desencriptar (){ var texto = document.querySelector("#inputTexto").value; 
+var textoCifrado = texto.replace(/enter/gi, "e")
+                        .replace(/imes/gi, "i")
+                        .replace(/ai/gi, "a")
+                        .replace(/ober/gi, "o")
+                        .replace(/ufat/gi, "u"); 
+document.querySelector(".textInputSalida").value = textoCifrado; document.querySelector("#inputTexto").value;
+
+}
+
+var boton2 = document.querySelector("#botonDesencriptar"); boton2.onclick = desencriptar;
+
+function Copiar() {
+  var copyText = document.getElementById("msg");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); 
+  navigator.clipboard.writeText(copyText.value);
+  alert("Texto Copiado: " + copyText.value);
+}
+
+var boton3 = document.querySelector("#botonCopiar"); boton3.onclick = Copiar;
+
+</script>
+</main>
+<br>
+<footer>
+
+</footer>
+</body>
+</html>

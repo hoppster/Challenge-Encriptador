@@ -1,0 +1,79 @@
+body{
+position: relative;
+width: 1240px;
+height: 620px;
+margin:40px;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 20px;
+
+background: rgb(235,243,247);
+background: -moz-linear-gradient(180deg, rgba(235,243,247,1) 5%, rgba(195,215,228,1) 15%, rgba(74,115,145,1) 85%, rgba(46,69,87,1) 99%);
+background: -webkit-linear-gradient(180deg, rgba(235,243,247,1) 5%, rgba(195,215,228,1) 15%, rgba(74,115,145,1) 85%, rgba(46,69,87,1) 99%);
+background: linear-gradient(180deg, rgba(235,243,247,1) 5%, rgba(195,215,228,1) 15%, rgba(74,115,145,1) 85%, rgba(46,69,87,1) 99%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ebf3f7",endColorstr="#2e4557",GradientType=1);
+}
+main textarea{
+    font-size: 15px;
+    resize: none;
+    padding: 10px;
+    border-color: rgb(0, 0, 0);
+    box-sizing: content-box;
+    border-radius: 8px;
+    
+}
+main input{
+width: 370px;
+padding: 10px;
+background-color: rgb(255, 255, 255);
+box-sizing: border-box;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+}
+main ::placeholder{
+    color: black;
+}
+section #botonEncriptar{
+    background-color:rgb(195,215,228);
+}
+.caja2{
+position: absolute;
+width: 336px;
+height: 122px;
+left: 890px;
+top: 10px;
+
+}
+.caja1{
+position: absolute;
+top: 90px;
+
+}
+.textoInput{
+    height:500px;
+    width: 780px;
+    background: none ;
+    font-size: x-large;
+    top: 90px;
+    border: none;
+    overflow: auto;
+    outline: none;
+    
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+   
+}
+.textInputSalida{
+width: 350px;
+height: 580px;
+
+}
+
+
+
+footer{
+background-color: rgb(44, 80, 106);
+}
